@@ -13,29 +13,26 @@
     <!-- <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet"> -->
     <!-- <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet"> -->
     <title>Gulp</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
 </head>
 
 <body>
-
-    <!-- @@include('_aboutus.html') -->
-    <!-- @@include('_brands.html') -->
-    <!-- @@include('_country.html') -->
-    <!-- @@include('_footer.html') -->
-    <!-- @@include('_info.html') -->
-    <!-- @@include('_navbar.html') -->
     <main id="main">
         @@include('_top_sidebar.html')
         @@include('_sidebar.html')
         @@include('_header.html')
         @@include('_section1.html')
+        @@include('_carousel.html')
         @@include('_section2.html')
         @@include('_section3.html')
         @@include('_section4.html')
         @@include('_section5.html')
+        @@include('_section6.html')
         @@include('_section7.html')
         @@include('_footer.html')
     </main>
-    <script src="js/script.min.js"></script>
+    <script src="/js/script.min.js"></script>
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -45,6 +42,43 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    grid: {
+                        rows: 1,
+                    }
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                    grid: {
+                        rows: 1,
+                    }
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                    grid: {
+                        rows: 2,
+                    }
+                },
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 </body>
 
 </html>
